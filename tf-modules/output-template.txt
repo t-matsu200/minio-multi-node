@@ -1,0 +1,4 @@
+$ aws ssm start-session --target ${AWS_INSTANCE1}
+$ aws ssm start-session --target ${AWS_INSTANCE2}
+$ aws ssm start-session --target ${AWS_INSTANCE3}
+$ aws ssm start-session --target ${AWS_INSTANCE4}

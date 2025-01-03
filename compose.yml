@@ -1,0 +1,18 @@
+services:
+  awscli:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    working_dir: /work/tf-modules
+    env_file:
+      - .env
+    volumes:
+      - .:/work
+      - minio-multi-node-tfdata:/tfdata
+    tty: true
+    # platform: linux/amd64
+    environment:
+      - TF_DATA_DIR=/tfdata
+
+volumes:
+  minio-multi-node-tfdata:
